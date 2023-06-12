@@ -45,7 +45,8 @@ where a. UnitPrice IS NULL
 -----------------------------------------------
 --frequently bought toghether items
 
-select top (1000) T1.InvoiceNo, T1.Description, T1.Quantity, T2.Description, T2.Quantity from [PortfolioProject ].[dbo].[Online Retail] T1
+select top (1000) T1.InvoiceNo, T1.Description, T1.Quantity, T2.Description, T2.Quantity 
+from [PortfolioProject ].[dbo].[Online Retail] T1
 join [PortfolioProject ].[dbo].[Online Retail] T2 on T1.InvoiceNo = T2.InvoiceNo
 where T1.Description > T2.Description
 
